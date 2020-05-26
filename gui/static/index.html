@@ -1,0 +1,48 @@
+<!--
+Copyright 2020 Yann Dumont
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT-Gateway</title>
+    <link rel=stylesheet type=text/css href="./style.css">
+    <script src="./gui.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <button class="btn" type="button" onclick="btnHeader('mr', this);">Module Registry</button>
+            <button class="btn" type="button" onclick="btnHeader('mm', this);">Module Management</button>
+            <button class="btn" type="button" onclick="btnHeader('cs', this);">Configuration</button>
+            <button class="btn" type="button" onclick="btnHeader('dm', this);">Deployments</button>
+            <button class="btn" type="button" onclick="btnHeader('m', this);">Logs</button>
+        </div>
+        <div id="main">
+
+        </div>
+        <div id="footer">
+            <div id="response"></div>
+            <div id="sk-wave">
+                <div class="sk-wave-rect"></div>
+                <div class="sk-wave-rect"></div>
+                <div class="sk-wave-rect"></div>
+                <div class="sk-wave-rect"></div>
+                <div class="sk-wave-rect"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
