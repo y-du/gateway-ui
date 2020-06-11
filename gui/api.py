@@ -79,7 +79,7 @@ class Router:
             url = self.__srv_map[service] + "/" + api
             if resource:
                 url = url + "/" + resource
-            response = requests.post(url=url, data=req.bounded_stream, params=req.params, headers={"Content-Type": req.content_type})
+            response = requests.post(url=url, data=req.bounded_stream.read(), params=req.params, headers={"Content-Type": req.content_type})
             if not response.status_code == 200:
                 raise RuntimeError("{} {}".format(response.status_code, response.reason))
             resp.status = falcon.HTTP_200
@@ -98,7 +98,7 @@ class Router:
             url = self.__srv_map[service] + "/" + api
             if resource:
                 url = url + "/" + resource
-            response = requests.patch(url=url, data=req.bounded_stream, params=req.params, headers={"Content-Type": req.content_type})
+            response = requests.patch(url=url, data=req.bounded_stream.read(), params=req.params, headers={"Content-Type": req.content_type})
             if not response.status_code == 200:
                 raise RuntimeError("{} {}".format(response.status_code, response.reason))
             resp.status = falcon.HTTP_200
@@ -117,7 +117,7 @@ class Router:
             url = self.__srv_map[service] + "/" + api
             if resource:
                 url = url + "/" + resource
-            response = requests.put(url=url, data=req.bounded_stream, params=req.params, headers={"Content-Type": req.content_type})
+            response = requests.put(url=url, data=req.bounded_stream.read(), params=req.params, headers={"Content-Type": req.content_type})
             if not response.status_code == 200:
                 raise RuntimeError("{} {}".format(response.status_code, response.reason))
             resp.status = falcon.HTTP_200
